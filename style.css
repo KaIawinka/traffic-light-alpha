@@ -68,3 +68,10 @@ body {
 .yellow, .yellow2 {
 	background-color: yellow;
 }
+
+@media screen and (max-width: 1000px) {
+	.main {
+		transform: scale(0.3);
+		padding: 100px;
+	}
+}
