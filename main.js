@@ -15,11 +15,8 @@ let timer = 16;
 let i = 0;
 right.style.color = "rgb(49, 255, 49)";
 left.style.color = "red";
-red.textContent = "STOP";
-red.style.fontSize = "50px";
 red2.style.backgroundColor = "darkred";
 green2.style.backgroundColor = "rgb(49, 255, 49)";
-green2.textContent = "GO";
 yellow.style.backgroundColor = "yellow";
 yellow2.style.backgroundColor = "yellow";
 
@@ -45,28 +42,18 @@ function updateTimer() {
 				i++;
 				red.style.backgroundColor = "darkred";
 				green.style.backgroundColor = "rgb(49, 255, 49)";
-				green.textContent = "GO";
-				red.textContent = "";
 				left.style.color ="rgb(49, 255, 49)";
 				right.style.color = "red";
 				red2.style.backgroundColor = "red";
 				green2.style.backgroundColor = "green";
-				red2.textContent = "STOP";
-				red2.style.fontSize = "50px";
-				green2.textContent = "";
 			} else if (i == 1) {
 				i--;
 				red.style.backgroundColor = "red";
 				green.style.backgroundColor = "green";
-				red.textContent = "STOP";
-				red.style.fontSize = "50px";
-				green.textContent = "";
 				left.style.color =	"red";
 				right.style.color = "rgb(49, 255, 49)";
 				red2.style.backgroundColor = "darkred";
 				green2.style.backgroundColor = "rgb(49, 255, 49)";
-				green2.textContent = "GO";
-				red2.textContent = "";
 			};
 	} else {
 		timer--;
