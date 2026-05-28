@@ -23,10 +23,10 @@ yellow2.style.backgroundColor = "yellow";
 
 
 function updateColor() {
-	if (timer <= 4 && yellow.style.backgroundColor == "yellow") {
+	if (timer <= 3 && yellow.style.backgroundColor == "yellow") {
 		yellow.style.backgroundColor = "rgb(139, 128, 0)";
 		yellow2.style.backgroundColor = "rgb(139, 128, 0)";
-	} else if (timer <= 4 && yellow.style.backgroundColor == "rgb(139, 128, 0)") {
+	} else if (timer <= 3 && yellow.style.backgroundColor == "rgb(139, 128, 0)") {
 		yellow.style.backgroundColor = "yellow";
 		yellow2.style.backgroundColor = "yellow";
 	};
