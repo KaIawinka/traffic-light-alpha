@@ -17,18 +17,26 @@ right.style.color = "rgb(49, 255, 49)";
 left.style.color = "red";
 red2.style.backgroundColor = "darkred";
 green2.style.backgroundColor = "rgb(49, 255, 49)";
-yellow.style.backgroundColor = "yellow";
-yellow2.style.backgroundColor = "yellow";
+yellow.style.backgroundColor = "rgb(139, 128, 0)";
+yellow2.style.backgroundColor = "rgb(139, 128, 0)";
+yellow.style.color = "red";
+yellow2.style.color = "rgb(49, 255, 49)";
+red.style.boxShadow = "inset 0 4px 50px rgba(255, 255, 255, 0.6), 0 0 150px rgba(255, 0, 0, 0.8), 0 0 100px rgba(255, 0, 0, 0.5)";
+green2.style.boxShadow = "inset 0 4px 50px rgba(255, 255, 255, 0.6), 0 0 150px rgba(49, 255, 49), 0 0 100px green";
 
 
 
 function updateColor() {
-	if (timer <= 3 && yellow.style.backgroundColor == "yellow") {
-		yellow.style.backgroundColor = "rgb(139, 128, 0)";
-		yellow2.style.backgroundColor = "rgb(139, 128, 0)";
-	} else if (timer <= 3 && yellow.style.backgroundColor == "rgb(139, 128, 0)") {
+	if (timer <= 3 && yellow.style.backgroundColor == "rgb(139, 128, 0)") {
 		yellow.style.backgroundColor = "yellow";
 		yellow2.style.backgroundColor = "yellow";
+		yellow.style.boxShadow = "inset 0 4px 50px rgba(255, 255, 255, 0.6), 0 0 150px yellow, 0 0 100px rgba(139, 128, 0)";
+		yellow2.style.boxShadow = "inset 0 4px 50px rgba(255, 255, 255, 0.6), 0 0 150px yellow, 0 0 100px rgba(139, 128, 0)";
+	} else if (timer <= 3 && yellow.style.backgroundColor == "yellow") {
+		yellow.style.backgroundColor = "rgb(139, 128, 0)";
+		yellow2.style.backgroundColor = "rgb(139, 128, 0)";
+		yellow.style.boxShadow = "";
+		yellow2.style.boxShadow = "";
 	};
 };
 setInterval(updateColor, 500);
@@ -42,10 +50,18 @@ function updateTimer() {
 				i++;
 				red.style.backgroundColor = "darkred";
 				green.style.backgroundColor = "rgb(49, 255, 49)";
-				left.style.color ="rgb(49, 255, 49)";
+				left.style.color = "rgb(49, 255, 49)";
 				right.style.color = "red";
 				red2.style.backgroundColor = "red";
 				green2.style.backgroundColor = "green";
+				yellow.style.color = "rgb(49, 255, 49)";
+				yellow2.style.color = "red";
+				yellow.style.backgroundColor = "rgb(139, 128, 0)";
+				yellow2.style.backgroundColor = "rgb(139, 128, 0)";
+				red2.style.boxShadow = "inset 0 4px 50px rgba(255, 255, 255, 0.6), 0 0 150px rgba(255, 0, 0, 0.8), 0 0 100px rgba(255, 0, 0, 0.5)";
+				green.style.boxShadow = "inset 0 4px 50px rgba(255, 255, 255, 0.6), 0 0 150px rgba(49, 255, 49), 0 0 100px green";
+				red.style.boxShadow = "";
+				green2.style.boxShadow = "";
 			} else if (i == 1) {
 				i--;
 				red.style.backgroundColor = "red";
@@ -54,6 +70,12 @@ function updateTimer() {
 				right.style.color = "rgb(49, 255, 49)";
 				red2.style.backgroundColor = "darkred";
 				green2.style.backgroundColor = "rgb(49, 255, 49)";
+				yellow.style.color = "red";
+				yellow2.style.color = "rgb(49, 255, 49)";
+				red.style.boxShadow = "inset 0 4px 50px rgba(255, 255, 255, 0.6), 0 0 150px rgba(255, 0, 0, 0.8), 0 0 100px rgba(255, 0, 0, 0.5)";
+				green2.style.boxShadow = "inset 0 4px 50px rgba(255, 255, 255, 0.6), 0 0 150px rgba(49, 255, 49), 0 0 100px green";
+				red2.style.boxShadow = "";
+				green.style.boxShadow = "";
 			};
 	} else {
 		timer--;
